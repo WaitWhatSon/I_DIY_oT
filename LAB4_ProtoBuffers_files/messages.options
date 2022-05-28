@@ -1,0 +1,5 @@
+Message1.content max_size:128
+Message1.Station.name max_size:128
+Message2.Station.name max_size:128
+Message3.Station.name max_size:128
+Message4.Station.name max_size:128

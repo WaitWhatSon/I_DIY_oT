@@ -1,0 +1,55 @@
+syntax = "proto2";
+
+message TestMessage {
+	required int32 test_number = 1;
+}
+
+message Message1{
+    optional int32 timestamp = 1;
+    optional string content = 2;
+	optional Station station = 3;
+
+    message Station{
+        required string name = 1;
+        required int32 id = 2;
+    }
+}
+
+message Message2{
+    optional int32 timestamp = 1;
+    repeated float anotherContent = 2;
+	optional Station station = 3;
+
+    message Station{
+        required string name = 1;
+        required int32 id = 2;
+    }
+}
+
+message Message3{
+    optional int32 timestamp = 1;
+    optional StationType stationType = 2;
+	optional Station station = 3;
+
+    enum StationType {
+        ESP = 0;
+        RASPBERRY = 1;
+    }
+    
+    message Station{
+        required string name = 1;
+        required int32 id = 2;
+    }
+}
+
+message Message4{
+    optional int32 timestamp = 1;
+    optional bool isOK = 2;
+	optional Station station = 3;
+
+
+    message Station{
+        required string name = 1;
+        required int32 id = 2;
+    }
+}
